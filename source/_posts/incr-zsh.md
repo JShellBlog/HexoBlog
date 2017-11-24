@@ -12,7 +12,7 @@ incr.zsh -- zsh模式下自动补全指令或目录
 Enable incr.zsh 的zsh 模式效果图如下：
 ![](http://mimosa-pudica.net/img/zsh.gif)
 ---
-
+<!-- more -->
 incr.zsh 的优点：
 - 自动补全
 - 大小写纠正

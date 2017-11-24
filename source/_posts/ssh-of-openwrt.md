@@ -14,7 +14,7 @@ dropbearkey  -y -f /etc/dropbear/dropbear_rsa_host_key
 ```
 
 将图中pulibc key 复制到服务端。
-
+<!-- more -->
 # 服务端
 dropbear 与openssh 有点区别在于，**authorized\_keys 文件并不在~/.ssh/authorized_keys 文件中**，如下图：
 
