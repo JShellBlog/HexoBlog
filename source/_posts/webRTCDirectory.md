@@ -4,6 +4,7 @@ date: 2017-11-28 20:03:36
 tags:
 	- webRTC
 	- Streaming
+categories: WebRTC
 ---
 
 # 1.Backgroud
@@ -30,7 +31,7 @@ common_audio | 放一些音频的基本算法。包括环形队列，博利叶�
 common_video |存放了视频算法相关的常用工具，如libyuv, sps/pps分析器，I420缓冲器等。
 modules | ** 后面单独列举 **
 media | 存放媒体相关的代码。
-p2p
+p2p |  
 rtc_base | 存放了一些基础代码。如线程，事件，socket等相关的代码。
 rtc_tools | 存放了一些工具代码。如视频帧比较，I420转RGB，视频帧分析。
 stats | 存放各种数据统计相关的类。
