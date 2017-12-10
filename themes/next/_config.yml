@@ -47,7 +47,7 @@ index_with_subtitle: false
 # When running the site in a subdirectory (e.g. domain.tld/blog), remove the leading slash (/archives -> archives)
 menu:
   home: /
-  #categories: /categories/
+  categories: /categories/
   #about: /about/
   archives: /archives/
   tags: /tags/
@@ -126,7 +126,7 @@ social_icons:
 # Sidebar Avatar
 # in theme directory(source/images): /images/avatar.jpg
 # in site  directory(source/uploads): /uploads/avatar.jpg
-avatar: https://timgsa.baidu.com/timg?image&quality=80&size=b10000_10000&sec=1502375566&di=e760f007e8027715d140c3c5c5a36182&src=http%3A%2F%2Fcdn.duitang.com%2Fuploads%2Fblog%2F201408%2F23%2F20140823170955_VMNiA.thumb.700_0.jpeg
+avatar: ./images/avatar.png
 
 # Table Of Contents in the Sidebar
 toc:
