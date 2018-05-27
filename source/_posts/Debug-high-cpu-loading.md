@@ -72,7 +72,7 @@ out1:
 
 ## 进程
 我们通常可以使用top 命令查看到某一个进程占用了较高的CPU Loading。
-![](https://raw.githubusercontent.com/JShell07/jshell07.github.io/master/images/cpu_high_loading/top_thread.png)
+![](https://raw.githubusercontent.com/JShell07/jshell07.github.io/master/images/cpu_high_loading/top_process.png)
 
 ## 线程
 可以通过`top -H -p <pid>` 命令具体查看`<pid>` 进程的子线程占用CPU Loading的情况。
