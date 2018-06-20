@@ -2,6 +2,7 @@
 title: TED_Notes
 date: 2018-06-13 23:21:49
 tags: TED
+categories: life
 ---
 
 ![](https://gss1.bdstatic.com/-vo3dSag_xI4khGkpoWK1HF6hhy/baike/c0%3Dbaike80%2C5%2C5%2C80%2C26/sign=23f2f937dcb44aed4d43b6b6d275ec64/2fdda3cc7cd98d10a403f64c273fb80e7aec90fc.jpg)
