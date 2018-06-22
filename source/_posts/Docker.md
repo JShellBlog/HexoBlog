@@ -2,6 +2,7 @@
 title: Docker 简单介绍
 date: 2018-06-01 19:59:25
 tags: Docker
+categories: tools
 ---
 
 # Docker

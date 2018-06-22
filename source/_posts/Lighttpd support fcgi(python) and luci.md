@@ -1,5 +1,6 @@
 ---
 title: Lighttpd Support FastCGI (python) and LUCI(OpenWrt)
+date: 2017-06-20 10:56:27
 tags:
 	- webserver
 categories: openwrt

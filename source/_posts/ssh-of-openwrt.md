@@ -3,6 +3,7 @@ title: ssh_of_openwrt
 date: 2017-09-04 20:10:09
 tags:
 	- openwrt
+categories: openwrt
 ---
 
 openwrt 一般采用dropbear 作为ssh 客户端/服务端。

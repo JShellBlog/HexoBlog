@@ -2,6 +2,7 @@
 title: Debug_high_cpu_loading
 date: 2018-05-26 15:28:50
 tags: Debug
+categories: debug
 ---
 
 ![](http://rdc.hundsun.com/portal/data/upload/201705/f_3c65934a804b2cd6ec6dab02ccb33457.png)

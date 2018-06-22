@@ -3,7 +3,7 @@
 title: more_coding_more_happy
 date: 2017-12-25 19:35:34
 tags: bookmarks reading_notes
-categorise: reading_notes
+categorise: bookmarks
 
 ---
 
