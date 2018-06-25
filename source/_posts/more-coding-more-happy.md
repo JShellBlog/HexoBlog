@@ -7,9 +7,12 @@ categorise: bookmarks
 
 ---
 
-## 《我编程，我快乐：程序员职业规划之道》
+# 我编程，我快乐：程序员职业规划之道》
+
 ![](https://gss1.bdstatic.com/9vo3dSag_xI4khGkpoWK1HF6hhy/baike/c0%3Dbaike80%2C5%2C5%2C80%2C26/sign=6a709c667af0f736ccf344536b3cd87c/342ac65c103853433ae62d389113b07eca8088fa.jpg)
+
 [*我编程，我快乐 百度百科*](https://baike.baidu.com/item/%E6%88%91%E7%BC%96%E7%A8%8B%EF%BC%8C%E6%88%91%E5%BF%AB%E4%B9%90/12445811?fr=aladdin)
+
 ## 序言
 
 ### 不要害怕失败
@@ -76,8 +79,6 @@ categorise: bookmarks
 
 - 从java 面向对象到Haskell或Scheme 函数式语言
 - Smalltalk或Ruby 不需要强类型的静态编程语言
-
-
 
 #### 1.7. 做一名通才
 
@@ -260,7 +261,6 @@ categorise: bookmarks
 
 ** TIPS：**
 记录日常恐慌的事情，练习分析。
-
 
 ## 4.推销...不仅仅是迎合
 
