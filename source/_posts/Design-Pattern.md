@@ -1,7 +1,9 @@
 ---
 title: Design_Pattern
 date: 2018-07-12 19:45:14
-tags: bookmarks
+tags: 
+ - bookmarks
+ - program
 categories: bookmarks
 ---
 
@@ -10,6 +12,8 @@ categories: bookmarks
 设计模式(design pattern)， 是在这1994年，由 Erich Gamma、Richard Helm、Ralph Johnson 和 John Vlissides 四人合著出版了一本名为 Design Patterns - Elements of Reusable Object-Oriented Software（中文译名：[设计模式 - 可复用的面向对象软件元素](https://baike.baidu.com/item/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%EF%BC%9A%E5%8F%AF%E5%A4%8D%E7%94%A8%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%BD%AF%E4%BB%B6%E7%9A%84%E5%9F%BA%E7%A1%80/7600072?fr=aladdin)） 的书提出。主要基于：
 - 对接口编程而不是对实现编程
 - 优先使用对象组合而不是继承
+
+<!--more-->
 
 ## 设计模式鸟览
 常见设计模式有23种。大体可以分为三大类：
