@@ -35,6 +35,16 @@ categories:
 把自己交给繁忙，得到的是踏实，却不是真实。 -- 《[无问西东](https://baike.baidu.com/item/%E6%97%A0%E9%97%AE%E8%A5%BF%E4%B8%9C/1743189?fr=aladdin)》
 ![](https://gss0.bdstatic.com/-4o3dSag_xI4khGkpoWK1HF6hhy/baike/c0%3Dbaike150%2C5%2C5%2C150%2C50/sign=b2fe4255c01349546a13e0363727f93d/d000baa1cd11728bab3176f6c3fcc3cec2fd2cc2.jpg)
 
+吾尝终日而思矣，不如须臾之所学也；吾尝跂而望矣，不如登高之博见也。 -- [荀子，《劝学》](https://baike.baidu.com/item/%E5%8A%9D%E5%AD%A6/1055?fr=aladdin)（有类似于，学而不思则罔,思而不学则怠。）
+
+只要努力了，一定会有结果。但结果也分好坏，这个结果不一定是你想要的。尽管如此，我们也不应该放弃改变，固步自封。
+
+别人贪婪的时候我恐惧，别人恐惧的时候我贪婪。 -- [沃伦·巴菲特](https://baike.baidu.com/item/%E6%B2%83%E4%BC%A6%C2%B7%E5%B7%B4%E8%8F%B2%E7%89%B9/472378?fromtitle=%E5%B7%B4%E8%8F%B2%E7%89%B9&fromid=215648&fr=aladdin)
+
+![](https://gss2.bdstatic.com/9fo3dSag_xI4khGkpoWK1HF6hhy/baike/c0%3Dbaike150%2C5%2C5%2C150%2C50/sign=64e7757bdb160924c828aa49b56e5e9f/1f178a82b9014a9024195490a2773912b31beefc.jpg)
+
+唯一真正的成功，是按自己的意思過上生活。-- [阮一峰 第15周分享](http://www.ruanyifeng.com/blog/2018/07/weekly-issue-15.html)
+
 ## 生活
 
 与其临渊羡鱼，不如退而结网
@@ -45,3 +55,5 @@ categories:
 
 **生活最沉重的负担不是生活，而是无聊**。 -- [罗曼.罗兰](https://baike.baidu.com/item/%E7%BD%97%E6%9B%BC%C2%B7%E7%BD%97%E5%85%B0/802941?fromtitle=%E7%BD%97%E6%9B%BC%E7%BD%97%E5%85%B0&fromid=1062483&fr=aladdin)
 ![](https://gss2.bdstatic.com/9fo3dSag_xI4khGkpoWK1HF6hhy/baike/c0%3Dbaike92%2C5%2C5%2C92%2C30/sign=162842ab1f950a7b613846966bb809bc/4ec2d5628535e5ddbd31bc4274c6a7efce1b6209.jpg)
+
+生活一定要五颜六色，但绝不要乱七八糟。
