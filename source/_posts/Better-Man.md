@@ -57,3 +57,6 @@ categories:
 ![](https://gss2.bdstatic.com/9fo3dSag_xI4khGkpoWK1HF6hhy/baike/c0%3Dbaike92%2C5%2C5%2C92%2C30/sign=162842ab1f950a7b613846966bb809bc/4ec2d5628535e5ddbd31bc4274c6a7efce1b6209.jpg)
 
 生活一定要五颜六色，但绝不要乱七八糟。
+
+人一生最大的幸运，就是在年富力强时发现了自己的人生使命。-- [斯蒂芬·茨威格](https://baike.baidu.com/item/%E6%96%AF%E8%92%82%E8%8A%AC%C2%B7%E8%8C%A8%E5%A8%81%E6%A0%BC/510001?fr=aladdin),[《人类群星闪耀时》](https://baike.baidu.com/item/%E4%BA%BA%E7%B1%BB%E7%BE%A4%E6%98%9F%E9%97%AA%E8%80%80%E6%97%B6/5948698?fr=aladdin)
+![](https://gss2.bdstatic.com/9fo3dSag_xI4khGkpoWK1HF6hhy/baike/c0%3Dbaike80%2C5%2C5%2C80%2C26/sign=b65b3e1858b5c9ea76fe0bb1b450dd65/71cf3bc79f3df8dc53c08782ce11728b47102827.jpg)

@@ -15,7 +15,7 @@ categories: bookmarks
 
 <!--more-->
 
-## 设计模式鸟览
+## 1. 设计模式鸟览
 常见设计模式有23种。大体可以分为三大类：
 - 创建模式（Creational Patterns）
 - 结构型模式(Structural Patterns)
@@ -30,4 +30,78 @@ categories: bookmarks
 行为型模式 | 这些设计模式特别**关注对象之间的通信**。
 J2EE 模式 | 这些设计模式特别**关注表示层**。这些模式是由 Sun Java Center 鉴定的。
 
+**创建模式（Creational Patterns）**
 
+![Creational Patterns](https://raw.githubusercontent.com/JShell07/jshell07.github.io/master/images/DesignPattern/CreationalPattern.png)
+
+**结构型模式(Structural Patterns)**
+
+![Structural Patterns](https://raw.githubusercontent.com/JShell07/jshell07.github.io/master/images/DesignPattern/StructuralPattern.png)
+
+**行为型模式（Behavioral Patterns)**
+
+![Behavioral Patterns](https://raw.githubusercontent.com/JShell07/jshell07.github.io/master/images/DesignPattern/BehavioralPatternpng.png)
+
+**J2EE设计模式**
+
+![J2EE设计模式](https://raw.githubusercontent.com/JShell07/jshell07.github.io/master/images/DesignPattern/J2EEPattern.png)
+
+## 2. 创建模式（Creational Patterns）
+### 2.1. 工厂模式（Factory Pattern)
+**目的**：定义一个创建对象的接口，让其子类自己决定实例化哪一个工厂类，工厂模式使其创建过程延迟到子类进行。
+
+**优点**: 扩展性高，并且屏蔽具体的实现。
+**缺点**: 每增加一个产品时，都需要实现具体类和对象实现工厂。
+
+```c++
+
+class Shape
+{
+    public:
+        virtual void draw() {};
+};
+
+class Circle: public Shape
+{
+    public:
+        void draw() { /* ... */ };
+};
+
+class Square: public Shape
+{
+    public:
+        void draw() { /* ... */ };
+};
+
+class ShapeFactory
+{
+    public:
+    class Shape * GetShape(string type) {
+        if(type.compare("CIRCLE") == 0)
+            return new Circle();
+        else if(type.compare("SQUARE") == 0)
+            return new Square();
+        else 
+            return null;
+    }
+}
+
+void main()
+{
+    class ShapeFactory shapeFactory = new ShapeFactory();
+
+    class Shape *shape1, shape2;
+    
+    shape1 = shapeFactory.GetShape("CIRCLE");
+    shape1->draw();
+
+    shape2 = shapeFactory.GetShape("SQUARE");
+    shape2->draw();
+
+    delete shape1;
+    delete shape2;
+}
+```
+
+## Ref.
+http://www.runoob.com/design-pattern/design-pattern-tutorial.html
