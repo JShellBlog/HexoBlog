@@ -45,6 +45,14 @@ categories:
 
 唯一真正的成功，是按自己的意思過上生活。-- [阮一峰 第15周分享](http://www.ruanyifeng.com/blog/2018/07/weekly-issue-15.html)
 
+如果一件事，我们仅仅因为害羞不去做，那么它更值得去做。
+
+人只是一根芦苇，是自然界最为脆弱的，但他却是一根会思考的芦苇。 -- [布莱士·帕斯卡](https://baike.baidu.com/item/%E5%B8%83%E8%8E%B1%E5%A3%AB%C2%B7%E5%B8%95%E6%96%AF%E5%8D%A1/8791342?fromtitle=%E5%B8%95%E6%96%AF%E5%8D%A1&fromid=5464)
+
+未经审视的人生是不值得过的。 -- [苏格拉底](https://baike.baidu.com/item/%E8%8B%8F%E6%A0%BC%E6%8B%89%E5%BA%95/12690?fr=aladdin)
+
+快速走向成熟有且只有一种方法：**主动进行大量有目的性的试错与学习。**
+
 ## 生活
 
 与其临渊羡鱼，不如退而结网
@@ -58,5 +66,6 @@ categories:
 
 生活一定要五颜六色，但绝不要乱七八糟。
 
-人一生最大的幸运，就是在年富力强时发现了自己的人生使命。-- [斯蒂芬·茨威格](https://baike.baidu.com/item/%E6%96%AF%E8%92%82%E8%8A%AC%C2%B7%E8%8C%A8%E5%A8%81%E6%A0%BC/510001?fr=aladdin),[《人类群星闪耀时》](https://baike.baidu.com/item/%E4%BA%BA%E7%B1%BB%E7%BE%A4%E6%98%9F%E9%97%AA%E8%80%80%E6%97%B6/5948698?fr=aladdin)
-![](https://gss2.bdstatic.com/9fo3dSag_xI4khGkpoWK1HF6hhy/baike/c0%3Dbaike80%2C5%2C5%2C80%2C26/sign=b65b3e1858b5c9ea76fe0bb1b450dd65/71cf3bc79f3df8dc53c08782ce11728b47102827.jpg)
+带给男人快速成熟的，往往是生活不经意的意外。
+
+哪有人天生会懂事，只不过见多了恶心的人。
