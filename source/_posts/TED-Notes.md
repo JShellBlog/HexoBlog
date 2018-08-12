@@ -62,7 +62,7 @@ categories: life
 `解决方法`：
 
 1. 人生一辈子的时间格子并不多，可能我们就过了1/3。
-![](http://image84.360doc.com/DownloadImg/2015/03/3121/51843460_5)
+![](https://upload-images.jianshu.io/upload_images/564259-0da4dc34d3474f4f?imageMogr2/auto-orient/strip%7CimageView2/2/w/640)
 
 2. 有战胜拖延症的信心，不要让及时行乐的猴子习惯性的获胜
 
