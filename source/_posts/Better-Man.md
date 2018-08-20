@@ -53,6 +53,9 @@ categories:
 
 快速走向成熟有且只有一种方法：**主动进行大量有目的性的试错与学习。**
 
+不要因为没有草原，就忘记你是马。-- [朴树，No Fear In My Heart](https://baike.baidu.com/item/No%20Fear%20In%20My%20Heart/20864952?fr=aladdin)
+
+
 ## 生活
 
 与其临渊羡鱼，不如退而结网
@@ -69,3 +72,5 @@ categories:
 带给男人快速成熟的，往往是生活不经意的意外。
 
 哪有人天生会懂事，只不过见多了恶心的人。
+
+言念君子，温其如玉。 -- [《国风·秦风·小戎》](https://baike.baidu.com/item/%E5%9B%BD%E9%A3%8E%C2%B7%E7%A7%A6%E9%A3%8E%C2%B7%E5%B0%8F%E6%88%8E/2687122)
