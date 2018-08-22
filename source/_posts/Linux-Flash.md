@@ -54,8 +54,12 @@ Nand Flash 硬件特性：
 
 ## 3. R/W Flow
 
+`MTD Read Flow`
 ![MTD_Read_Flow](https://raw.githubusercontent.com/JShell07/jshell07.github.io/master/images/Linux_Flash/MTD_Read_Flow.png)
 
+<br>
+
+`MTD Read Flow`
 ![MTD_Write_Flow](https://raw.githubusercontent.com/JShell07/jshell07.github.io/master/images/Linux_Flash/MTD_Write_Flow.png)
 
 ## 4. Bad Block
