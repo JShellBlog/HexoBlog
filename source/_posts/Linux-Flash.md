@@ -13,6 +13,8 @@ categories:
 
 ![MOS管插图](https://raw.githubusercontent.com/JShell07/jshell07.github.io/master/images/Linux_Flash/MOS%E7%AE%A1.png)
 
+<!--more-->
+
 注：
 >N型半导体即自由电子浓度远大于空穴浓度的杂质半导体。(对于锗、硅类半导体材料，掺杂Ⅴ族元素(磷、砷等)
 P型半导体即空穴浓度远大于自由电子浓度的杂质半导体。在纯净的硅晶体中掺入三价元素（如硼）
