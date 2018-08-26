@@ -89,7 +89,7 @@ U-Boot 的内存主要分布图如下图：
 | 名称 | 默认值 | 备注 |
 | :- | :- | :- |
 | bootargs | noinitrd root=/dev/mtdblock4 init=/linuxrc
-console=ttySAC0,115200 | U-Boot 在启动内核之前的等待时间，单位：秒 |
+| console=ttySAC0,115200 | U-Boot 在启动内核之前的等待时间，单位：秒 |
 | bootdelay | 1 | 与处理器相关 |
 | ethaddr | 00:40:5C:26:0A:5B | 网卡的MAC 地址 |
 | ipaddr | 172.20.223.235 | U-Boot 使用的IP 地址 |
