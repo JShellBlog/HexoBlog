@@ -55,6 +55,7 @@ categories:
 
 不要因为没有草原，就忘记你是马。-- [朴树，No Fear In My Heart](https://baike.baidu.com/item/No%20Fear%20In%20My%20Heart/20864952?fr=aladdin)
 
+改变能改变的，接受不能改变的。
 
 ## 生活
 
