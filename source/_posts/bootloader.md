@@ -253,7 +253,7 @@ U-Boot就是将各种启动参数串联成类似下图结构给OS。
 ### 2.5. Bootup OS
 
 以ARM 体系启动Kernel需满足以下几点：
-- R0 = 0， R1 = <机器码>, R2 = <Kernel启动参数起始地址>
+- R0=0， R1=[机器码], R2=[Kernel启动参数起始地址]
 - Disable I/D Cache
 - Disable IRQ，FIQ
 - CPU in SVC 模式
