@@ -14,7 +14,7 @@ categories:
 
 [bootloader -- wiki](https://en.wikipedia.org/wiki/Booting#BOOT-LOADER)
 
-![](https://thumbnail0.baidupcs.com/thumbnail/bcdcf9dc98a78811315f01deefd45e8e?fid=889753022-250528-245711883146327&time=1535270400&rt=sh&sign=FDTAER-DCb740ccc5511e5e8fedcff06b081203-gqSRlNCoO%2Bv5XYM0ai5AHipH1E4%3D&expires=8h&chkv=0&chkbd=0&chkpc=&dp-logid=5512865044545112000&dp-callid=0&size=c710_u400&quality=100&vuk=-&ft=video)
+![](https://raw.githubusercontent.com/JShell07/jshell07.github.io/master/images/bootloader/bootloader.jpg)
 
 <!--more-->
 
@@ -40,7 +40,7 @@ U-Boot的主要作用是：
 BootLoader的启动过程可以使单阶段(single stage)与多阶段(multi-stage)
 一般选择多阶段启动提供更复杂的功能，以及更好的可移植性。
 
-![](https://thumbnail0.baidupcs.com/thumbnail/3ddcdca408b7e1b0d31ab2fe59006617?fid=889753022-250528-896050572987862&time=1535270400&rt=sh&sign=FDTAER-DCb740ccc5511e5e8fedcff06b081203-m9cSEYQ4OCPgNAn6sm2b3OG%2B8e0%3D&expires=8h&chkv=0&chkbd=0&chkpc=&dp-logid=5513044539032489487&dp-callid=0&size=c710_u400&quality=100&vuk=-&ft=video)
+![](https://raw.githubusercontent.com/JShell07/jshell07.github.io/master/images/bootloader/Bootup%20Stages.jpg)
 
 ### 2.1.1. Stage1
 常用汇编代码编写此段代码。例如`u-boot/arch/arm/xxx/start.S`。
@@ -51,7 +51,7 @@ Stage1 的主要作用：
 - 拷贝Rom或者Flash 等上的程序到Ram中（u-boot运行代码）
 - 初始化堆栈
 
-![](https://thumbnail0.baidupcs.com/thumbnail/394fee61fc0c74e91b1ed549ee6d80d1?fid=889753022-250528-389946240290003&time=1535277600&rt=sh&sign=FDTAER-DCb740ccc5511e5e8fedcff06b081203-5%2F%2F7TOt5qaC4UCNDGctkrBvLbwI%3D&expires=8h&chkv=0&chkbd=0&chkpc=&dp-logid=5514214630624361233&dp-callid=0&size=c710_u400&quality=100&vuk=-&ft=video)
+![](https://raw.githubusercontent.com/JShell07/jshell07.github.io/master/images/bootloader/bootup_flow_1.jpg)
 
 ### 2.1.2. Stage2
 主要是C语言代码，ARM体系一般是在lib_arm/board.c中start_armboot()。Stage2 主要完成：
@@ -61,10 +61,10 @@ Stage1 的主要作用：
 - 设定启动参数
 - 启动OS
 
-![](https://thumbnail0.baidupcs.com/thumbnail/397e2233b6f343ba601412ecbd219d50?fid=889753022-250528-242017452857763&time=1535277600&rt=sh&sign=FDTAER-DCb740ccc5511e5e8fedcff06b081203-I%2BgHSxiMXmQzA5QHSNUR46BFA3M%3D&expires=8h&chkv=0&chkbd=0&chkpc=&dp-logid=5514217812900511089&dp-callid=0&size=c710_u400&quality=100&vuk=-&ft=video)
+![](https://raw.githubusercontent.com/JShell07/jshell07.github.io/master/images/bootloader/bootup_flow_2.jpg)
 
 ### 2.2. U-Boot Directory
-![](https://thumbnail0.baidupcs.com/thumbnail/a4f91c0e3f25e8f735c4ac39faf6da39?fid=889753022-250528-620612769662554&time=1535277600&rt=sh&sign=FDTAER-DCb740ccc5511e5e8fedcff06b081203-JcSt3%2FCD5UPAHcfKiys9YNxn%2FXw%3D&expires=8h&chkv=0&chkbd=0&chkpc=&dp-logid=5514208516526780337&dp-callid=0&size=c710_u400&quality=100&vuk=-&ft=video)
+![](https://raw.githubusercontent.com/JShell07/jshell07.github.io/master/images/bootloader/directory.jpg)
 
 | 目录 | 特性 | 备注 |
 | :- | :- | :- |
@@ -81,7 +81,7 @@ Stage1 的主要作用：
 
 ### 2.3. U-Boot Memory Map
 U-Boot 的内存主要分布图如下图：
-![](https://thumbnail0.baidupcs.com/thumbnail/309fb187b52571daffa5031f8b11be5a?fid=889753022-250528-768880788147543&time=1535270400&rt=sh&sign=FDTAER-DCb740ccc5511e5e8fedcff06b081203-lFXJeIov9i5Vy9vQLmD3Z3NhJKw%3D&expires=8h&chkv=0&chkbd=0&chkpc=&dp-logid=5512875251294784609&dp-callid=0&size=c710_u400&quality=100&vuk=-&ft=video)
+![](https://raw.githubusercontent.com/JShell07/jshell07.github.io/master/images/bootloader/uboot_mem_map.jpg)
 
 
 ### 2.4. U-Boot Parameters
@@ -188,7 +188,7 @@ typedef struct bd_info {
 
 在启动之后一般使用RAM 临时存放启动参数，在使用`saveenv` 命令后将会将之写到类似于Flash 存储介质上。
 
-![](https://thumbnail0.baidupcs.com/thumbnail/028bde75ac43a6a2aa64364cfdfce2f7?fid=889753022-250528-42227487400626&time=1535277600&rt=sh&sign=FDTAER-DCb740ccc5511e5e8fedcff06b081203-L%2F%2B5ewnQKoGdy9%2B9zML2mnqHAP8%3D&expires=8h&chkv=0&chkbd=0&chkpc=&dp-logid=5514258972478182924&dp-callid=0&size=c710_u400&quality=100&vuk=-&ft=video)
+![](https://raw.githubusercontent.com/JShell07/jshell07.github.io/master/images/bootloader/bootup_parameters_store.jpg)
 
 **Parameters Structure**
 ARM 采用了自己体系定义的参数结构。它的定义可以参见`arch/arm/include/asm/setup.h`。
@@ -245,7 +245,7 @@ struct tag_core {
 ```
 
 U-Boot就是将各种启动参数串联成类似下图结构给OS。
-![](https://thumbnail0.baidupcs.com/thumbnail/95b643719b7e279dd9923ee54e7e583b?fid=889753022-250528-160746958444600&time=1535277600&rt=sh&sign=FDTAER-DCb740ccc5511e5e8fedcff06b081203-g%2BeAW0abjE2swNOsFmH4LY9ul0c%3D&expires=8h&chkv=0&chkbd=0&chkpc=&dp-logid=5514269101626308086&dp-callid=0&size=c710_u400&quality=100&vuk=-&ft=video)
+![](https://raw.githubusercontent.com/JShell07/jshell07.github.io/master/images/bootloader/bootup_parameters_structure.jpg)
 
 注：**必须以ATAG_CORE, ATAG_NONE开头与结尾，Kernel启动时会依据此检测参数的有效性。**
 
@@ -259,13 +259,13 @@ U-Boot就是将各种启动参数串联成类似下图结构给OS。
 
 注：SVC 模式为Supervisor Control 模式，操作系统使用的保护模式，此模式下CPU能访问的数据权限更大，局限小。
 
-![](https://thumbnail0.baidupcs.com/thumbnail/46708a8f56a386f94f4f7c5a12606913?fid=889753022-250528-952131477838922&time=1535277600&rt=sh&sign=FDTAER-DCb740ccc5511e5e8fedcff06b081203-LuuotVJQC0veQPnLkJIDUqTYXCk%3D&expires=8h&chkv=0&chkbd=0&chkpc=&dp-logid=5514221256511756842&dp-callid=0&size=c710_u400&quality=100&vuk=-&ft=video)
+![](https://raw.githubusercontent.com/JShell07/jshell07.github.io/master/images/bootloader/bootup_os.jpg)
 
 `Setting`
-![](https://thumbnail0.baidupcs.com/thumbnail/23689e765f0a3f1baadfcf3dbc5e7321?fid=889753022-250528-720197262741068&time=1535277600&rt=sh&sign=FDTAER-DCb740ccc5511e5e8fedcff06b081203-yGwXrpCVYPjWXTucaMpmOtdvJHg%3D&expires=8h&chkv=0&chkbd=0&chkpc=&dp-logid=5514233255734750780&dp-callid=0&size=c710_u400&quality=100&vuk=-&ft=video)
+![](https://raw.githubusercontent.com/JShell07/jshell07.github.io/master/images/bootloader/bootup_os_need_setting.jpg)
 
 `Parameters`
-![](https://thumbnail0.baidupcs.com/thumbnail/19923c008966fe37dcf8f13f0723cc80?fid=889753022-250528-120766014243171&time=1535277600&rt=sh&sign=FDTAER-DCb740ccc5511e5e8fedcff06b081203-A%2FIibEgVdUX5IbIDz%2Bg09wrFOSE%3D&expires=8h&chkv=0&chkbd=0&chkpc=&dp-logid=5514253595195416566&dp-callid=0&size=c710_u400&quality=100&vuk=-&ft=video)
+![](https://raw.githubusercontent.com/JShell07/jshell07.github.io/master/images/bootloader/bootup_os_parameters.jpg)
 
 ## Reference
 [BootLoader -- wiki](https://en.wikipedia.org/wiki/Booting#BOOT-LOADER)
