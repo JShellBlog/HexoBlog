@@ -103,5 +103,73 @@ void main()
 }
 ```
 
+### 2.2. 抽象工厂模式（Abstract Factory Pattern)
+**目的**：超级工厂又称为其他工厂的工厂，它提供了一种创建对象的最佳方式。
+
+**优点**: 当一个产品族中的多个对象被设计成一起工作时，它能保证客户端始终只使用同一个产品族中的对象。
+**缺点**: 产品族扩展困难。既要在抽象的creator 里修改，又要实习具体的代码。
+
+虚基类的感觉。
+
+```c++
+class Shape
+{
+    public:
+        virtual void draw() {};
+};
+
+class Circle: public Shape
+{
+    public:
+        void draw() { /* ... */ };
+};
+
+class Square: public Shape
+{
+    public:
+        void draw() { /* ... */ };
+};
+
+class Color 
+{
+    public:
+        void fill();
+};
+
+class Blue: public Color
+{
+    public:
+        void fill(){/* ... */}
+};
+
+class Red: public Color
+{
+    public:
+        void fill(){/* ... */}
+};
+
+class AbstractFactory
+{
+    class Color* getColor(string color);
+    class Shape* getShape(string shape);
+};
+
+class ShapeFactory: public AbstractFactory
+{
+    public:
+    class Shape * getShape(string type) {
+        if(type.compare("CIRCLE") == 0)
+            return new Circle();
+        else if(type.compare("SQUARE") == 0)
+            return new Square();
+        else 
+            return null;
+    }
+    class Color* getColor(string color) {
+        /* ... */
+    }
+}
+```
+
 ## Ref.
 http://www.runoob.com/design-pattern/design-pattern-tutorial.html
