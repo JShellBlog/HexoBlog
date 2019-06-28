@@ -4,6 +4,7 @@ date: 2018-08-22 22:20:13
 tags:
     - Driver
     - Flash
+    - kernel
 categories:
     - Driver
 ---
