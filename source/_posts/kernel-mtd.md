@@ -8,12 +8,12 @@ categories:
     - Driver
 ---
 
-<!--more-->
-
 ## 1. Flash 大致分类  
 - Nor Flash (intel 开发)
 - Nand Flash (Toshiba 开发)
 - OneNand Flash(Samsung 开发)
+
+<!--more-->
 
 NAND Flash在容量、功耗、使用寿命、写速度快、芯片面积小、单元密度高、擦除速度快、成本低等方面的优势使其成为高数据存储密度的理想解决方案。
 NOR Flash的传输效率很高，但写入和擦除速度较低；

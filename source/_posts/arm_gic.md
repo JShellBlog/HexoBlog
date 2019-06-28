@@ -1,5 +1,16 @@
-GICv2
+---
+title: arm gicv2
+date: 2019-04-20 13:55:44
+tags:
+    - arm
+    - spec
+    - GICv2
+categories:
+    - arm
+---
 
+GICv2
+<!--more-->
 ##1. Introduction
 About the Generic Interrupt Controller architecture
 The Generic Interrupt Controller (GIC) architecture defines:

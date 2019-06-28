@@ -1,8 +1,19 @@
+---
+title: arm arm
+date: 2019-05-28 13:55:44
+tags:
+    - arm
+    - spec
+categories:
+    - arm
+---
 
 ## Part A. Application Level Architecture
 ---
 ### A1. Introduction to the ARM Architecture
 ---
+<!--more-->
+
 #### A1.4 Architecture extensions
 __Jazelle__
 Is the Java bytecode execution extension that extended ARMv5TE to ARMv5TEJ. From

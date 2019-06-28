@@ -1,6 +1,15 @@
+---
+title: arm arm part B
+date: 2019-05-30 13:55:44
+tags:
+    - arm
+    - spec
+categories:
+    - arm
+---
 
 Reference: <<ARM ® Architecture Reference Manual -- ARMv7-A and ARMv7-R edition>> (ARM DDI 0406C.c (ID051414))
-
+<!--more-->
 ## Part B System Level Architecture
 
 ### B1 System Level Programmers’ Model
