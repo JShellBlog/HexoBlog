@@ -29,7 +29,27 @@ Nor Flash | 100MBps | 0.5MBps | 0.3MBps | - | YES | 常见<= 32M | 10几万 | �
 Nand Flash | 15MBps | 7MBps | 64MBps |有 | - | 大容量 | 100万 | 低
 OneNand Flash | 100MBps | 10MBps | 64MBps | 有 | YES | 较大容量 |  100万 | 较低
 
+### 1.1. 总线接口
 
+#### 1.1.1. Nand Flash
+Nand Flash 常见有：
+- 总线接口Flash    
+- SPI Flash  
+总线flash需要你的MCU上有外部总线接口，SPI flash就是通过SPI口对flash进行读写。
+速度上，总线flash比SPI的快，但是SPI的便宜。
+
+#### 1.1.2. Nor Flash
+在通信方式上Nor Flash 分为两种类型：CFI Flash和 SPI Flash。
+_CFI Flash_
+英文全称是common flash interface,也就是公共闪存接口，是由存储芯片工业界定义的一种获取闪存芯片物理参数和结构参数的操作规程和标准。CFI有许多关于闪存芯片的规定，有利于嵌入式对FLASH的编程。现在的很多NOR FLASH 都支持CFI，但并不是所有的都支持。  
+
+CFI接口，相对于串口的SPI来说，也被称为parallel接口，并行接口；另外，CFI接口是JEDEC定义的，所以，有的又成CFI接口为JEDEC接口。所以，可以简单理解为：对于Nor Flash来说，CFI接口＝JEDEC接口＝Parallel接口 = 并行接口
+
+_SPI Flash_
+serial peripheral interface串行外围设备接口,是一种常见的时钟同步串行通信接口。
+
+_两者不同处_
+CFI接口的的Nor Flash的针脚较多，芯片较大。之所有会有SPI接口, 可以减少针脚数目，减少芯片封装大小，采用了SPI后的Nor Flash，针脚只有8个。SPI容量都不是很大，读写速度慢，但是价格便宜，操作简单。而parallel接口速度快，容量上市场上已经有1Gmbit的容量，价格昂贵。
 
 ## 2. 延伸扩展  
 ![](https://gss2.bdstatic.com/-fo3dSag_xI4khGkpoWK1HF6hhy/baike/c0%3Dbaike92%2C5%2C5%2C92%2C30/sign=47c8a31259ee3d6d36cb8f99227f0647/e1fe9925bc315c60225ddb5a8db1cb13485477be.jpg)
@@ -42,7 +62,37 @@ OneNand Flash | 100MBps | 10MBps | 64MBps | 有 | YES | 较大容量 |  100万 |
 
 [SSD技术扫盲之：什么是NVMe？ NVMe SSD有什么特点？](http://www.chinastor.com/baike/ssd/04103A942017.html)
 
-参看资源：  
+## 3. Kernel MTD Source code
+Kernel 中MTD 的源码如下图所示：
+![](https://raw.githubusercontent.com/JShell07/jshell07.github.io/master/images/kernel_mtd/mtd_source_code_tree.png)
+
+MTD 组成的源代码框架如下：
+![](https://raw.githubusercontent.com/JShell07/jshell07.github.io/master/images/kernel_mtd/mtd_source_code_structure.png)
+
+项目 | 说明 
+:-: | :-
+FTL | Flash Translation Layer, 需要PCMCIA 硬件授权专利
+NFTL | Nand flash translation layer, 需要DiskOnChip 硬件授权专利
+INFTL | Inverse Nand flash translation layer, 需要DiskOnChip 硬件授权专利
+spi-nor | spi nor flash source code
+chips, maps | CFI Nor Flash
+nand | nand flash
+ubi | unsorted block images, 基于raw flash 的卷管理系统
+
+在mtd 目录下还有一些有意思的code, 他们分别是：
+- mtdconcat.c 将多个MTD 设备组成一个MTD， 功能类似于rapid 磁盘阵列  
+- cmdlinepart.c 提供解析启动参数中的MTD 信息  
+- mtdswap.c  交换分区，用于wear leveling 记录erase counter， 但UBI 已经具备此功能
+- mtdsuper.c  用于向fs/jffs2, fs/romfs 提供挂载接口
+
+## 4. 源代码框架
+![](https://raw.githubusercontent.com/JShell07/jshell07.github.io/master/images/kernel_mtd/mtd_structure.png)
+
+## 参看资源：  
 [OneNAND](https://blog.csdn.net/programxiao/article/details/6214607)
 
 [三星OneNAND技术](https://www.chinaflashmarket.com/Instructor/102570)
+
+[Nand Flash，Nor Flash，CFI Flash，SPI Flash 之间的关系](https://www.cnblogs.com/zhangj95/p/5649518.html) 
+
+[CFI与SPI flash区别](https://blog.csdn.net/pine222/article/details/47090041)
