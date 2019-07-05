@@ -88,6 +88,61 @@ ubi | unsorted block images, 基于raw flash 的卷管理系统
 ## 4. 源代码框架
 ![](https://raw.githubusercontent.com/JShell07/jshell07.github.io/master/images/kernel_mtd/mtd_structure.png)
 
+mtdchar.c 向flash tools 或者用户层提供IOCTL 操作。
+mtdblock.c 向kernel 提供block read/write sector访问。
+
+他们两者的动态加载是通过mtdcore.c 中的add_mtd_device()函数。 例如在mtdblock.c 中：
+```c
+static struct mtd_notifier blktrans_notifier = {
+	.add = blktrans_notify_add,
+	.remove = blktrans_notify_remove,
+};
+
+int register_mtd_blktrans(struct mtd_blktrans_ops *tr)
+{
+    ...
+    register_mtd_user(&blktrans_notifier);
+}
+```
+在mtdcore.c 中
+```c
+int add_mtd_device(struct mtd_info *mtd)
+{
+
+    /* register char dev node */
+	mtd->dev.type = &mtd_devtype;
+	mtd->dev.class = &mtd_class;
+	mtd->dev.devt = MTD_DEVT(i);
+	dev_set_name(&mtd->dev, "mtd%d", i);
+	dev_set_drvdata(&mtd->dev, mtd);
+	if (device_register(&mtd->dev) != 0)
+		goto fail_added;
+
+    /* call mtd_notifiers, so it will call mtdblock.c blktrans_notify_add() */
+	list_for_each_entry(not, &mtd_notifiers, list)
+		not->add(mtd);
+}
+```
+大致流程如下图所示：
+![](https://raw.githubusercontent.com/JShell07/jshell07.github.io/master/images/kernel_mtd/register%20partition.png)
+
+注册相关数据结构：
+```c
+struct mtd_part {
+	struct mtd_info mtd;
+	struct mtd_info *master;
+	uint64_t offset;
+	struct list_head list;
+};
+
+struct mtd_partition {
+	const char *name;		/* identifier string */
+	uint64_t size;			/* partition size */
+	uint64_t offset;		/* offset within the master MTD space */
+	uint32_t mask_flags;		/* master MTD flags to mask out for this partition */
+	struct nand_ecclayout *ecclayout;	/* out of band layout for this partition (NAND only) */
+};
+```
 ## 参看资源：  
 [OneNAND](https://blog.csdn.net/programxiao/article/details/6214607)
 
