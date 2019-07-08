@@ -2,8 +2,8 @@
 title: C++_UML
 date: 2017-12-14 17:03:51
 tags:
-	- C++
-categories: C++	
+	- c++
+categories: c++	
 ---
 
 C++ UML

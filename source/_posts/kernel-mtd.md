@@ -2,10 +2,10 @@
 title: kernel_mtd
 date: 2019-06-25 11:43:30
 tags:
-    - Driver
+    - driver
     - kernel
 categories:
-    - Driver
+    - driver
 ---
 
 ## 1. Flash 大致分类  
@@ -37,6 +37,28 @@ Nand Flash 常见有：
 - SPI Flash  
 总线flash需要你的MCU上有外部总线接口，SPI flash就是通过SPI口对flash进行读写。
 速度上，总线flash比SPI的快，但是SPI的便宜。
+
+如果Nand Flash 使用总线接口，一般pin 如下：
+
+Pins | Function  
+:-: | :-  
+I/O 0-7(15) | Data input or output(16 bit buswidth chips are supported in kernel)  
+/CE | Chip Enable  
+/CLE | Command Latch Enable  
+ALE | Address Latch Enable  
+/RE | Read Enable  
+/WE | Write Enable  
+/WP | Write Protect  
+/SE | Spare area Enable ( link to GND)  
+R/B | Ready / Busy Output  
+
+At the moment there are only a few filesystems which support NAND:
+- JFFS2 and YAFFS for bare NAND Flash and SmartMediaCards  
+- NTFL for DiskOnChip devices  
+- TRUEFFS from M-Systems for DiskOnChip devices  
+- SmartMedia DOS-FAT as defined by the SSFDC Forum  
+- UBIFS for bare NAND flash
+
 
 #### 1.1.2. Nor Flash
 在通信方式上Nor Flash 分为两种类型：CFI Flash和 SPI Flash。
@@ -151,3 +173,5 @@ struct mtd_partition {
 [Nand Flash，Nor Flash，CFI Flash，SPI Flash 之间的关系](https://www.cnblogs.com/zhangj95/p/5649518.html) 
 
 [CFI与SPI flash区别](https://blog.csdn.net/pine222/article/details/47090041)
+
+[MTD 官网](http://www.linux-mtd.infradead.org/doc/general.html)
