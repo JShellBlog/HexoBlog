@@ -2,8 +2,8 @@
 title: C++_UML
 date: 2017-12-14 17:03:51
 tags:
-	- c++
-categories: c++	
+	- UML
+categories: UML	
 ---
 
 ## 1. Basic 

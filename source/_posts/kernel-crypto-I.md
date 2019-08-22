@@ -1,10 +1,8 @@
 ---
 title: kernel_crypto_I
 date: 2019-08-06 19:37:35
-tags:
-    - cryptographic
-categories:
-    - driver
+tags: cryptographic
+categories: drivers
 ---
 
 ### 1. 基础
@@ -99,6 +97,8 @@ __PIO Mode__
 ### 2. Kernel Crypto
 crypto 在kernel 中可以分为如下几类（）：
 1. cipher (AES, DES, TDES等)
+1.1. Symmetric cipher(ablkcipher, blkcipher, cipher)  
+1.2. aead cipher(Authenticated Encryption with Associated Data )  
 2. compress(zlib, lzo 等)  
 3. digest  (摘要算法例如crc32, sha1, md5等)
 4. random （软件层随机数）
@@ -199,3 +199,7 @@ int crypto_unregister_algs(struct crypto_alg *algs, int count);
 [Linux加密框架设计与实现(转)](https://www.cnblogs.com/hoys/archive/2013/03/25/2981612.html)
 
 [linux内核cryto接口的实现以及与openssl的比较](https://blog.csdn.net/dog250/article/details/5561075)
+
+[Linux Kernel Crypto API](https://01.org/linuxgraphics/gfx-docs/drm/crypto/)
+
+[什么是AEAD加密](https://zhuanlan.zhihu.com/p/28566058)

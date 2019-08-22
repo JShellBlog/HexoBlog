@@ -5,7 +5,7 @@ tags:
     - mtd
     - ubi
 categories: 
-    - driver
+    - drivers
 ---
 
 ## 1. 背景

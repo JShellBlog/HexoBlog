@@ -2,11 +2,10 @@
 title: Linux_Flash
 date: 2018-08-22 22:20:13
 tags:
-    - driver
     - flash
     - kernel
 categories:
-    - driver
+    - drivers
 ---
 
 ## 1. Flash

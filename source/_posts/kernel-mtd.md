@@ -2,10 +2,9 @@
 title: kernel_mtd
 date: 2019-06-25 11:43:30
 tags:
-    - driver
-    - kernel
+    - mtd
 categories:
-    - driver
+    - drivers
 ---
 
 ## 1. Flash 大致分类  
