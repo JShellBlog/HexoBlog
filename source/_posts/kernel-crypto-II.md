@@ -16,8 +16,9 @@ categories: drivers
 
 后面我们会着重介绍ablkcipher 与blkcipher 这种multi-block 类型的加密算法。
 
-### 2. cipher data structure
+后面我们以kernel/drivers/crypto/atmel-aes.c 进行分析ablkcipher 的驱动。
 
+### 2. cipher data structure
 
 ### 3. cipher flow
 
@@ -32,3 +33,4 @@ int crypto_unregister_algs(struct crypto_alg *algs, int count);
 
 ### 参看资料
 
+[3.18.11/drivers/crypto/atmel-aes.c](https://elixir.bootlin.com/linux/v3.18.11/source/drivers/crypto/atmel-aes.c)
