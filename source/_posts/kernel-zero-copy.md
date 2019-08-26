@@ -50,7 +50,7 @@ memcpy(target, source, filesize);
 
 除vmsplice（） 是映射函数外，其他借助管道实现，而管道有众所周知的空间限制问题，超过了限制就会hang住，所以每次写入管道的数据量好严格控制，保守的建议值是一个内存页大小，即PAGE_SIZE, 常见为4k。
 
-splice用于在两个文件间移动数据，而无需内核态和用户态的内存拷贝，但需要借助管道（pipe）实现。大概原理就是通过pipe buffer实现一组内核内存页（pages of kernel memory）的引用计数指针（reference-counted pointers），数据拷贝过程中并不真正拷贝数据，而是创建一个新的指向内存页的指针。也就是说拷贝过程实质是指针的拷贝.
+splice用于在两个文件间移动数据，而无需内核态和用户态的内存拷贝，但需要借助管道（pipe）实现。<font color=red>大概原理就是通过pipe buffer实现一组内核内存页（pages of kernel memory）的引用计数指针（reference-counted pointers），数据拷贝过程中并不真正拷贝数据，而是创建一个新的指向内存页的指针。也就是说拷贝过程实质是指针的拷贝.</font>
 
 ![zero copy image](https://raw.githubusercontent.com/JShell07/jshell07.github.io/master/images/kernel_zero_copy/splice%20read%20write.png)
 
