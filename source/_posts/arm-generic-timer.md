@@ -25,13 +25,14 @@ The Generic Timer 提供如下几种counter与Timer：
 
 ## 2. system counter
 system counter规格如下
-子项 | 需求
-:-: | :-
-Width | 至少56bits 宽度，返回64-bit 是以0 进行扩展得到
-Frequency | 典型范围 1-50MHz. 在power-saving 时可以更低，例如500-20KHz
-Roll-over | 不少于40年
-Accuracy（精度）| 24Hours 误差不超过1s
-Start-up | 从0 开始累计
+
+子项 | 需求  
+:-: | :-  
+Width | 至少56bits 宽度，返回64-bit 是以0 进行扩展得到  
+Frequency | 典型范围 1-50MHz. 在power-saving 时可以更低，例如500-20KHz  
+Roll-over | 不少于40年  
+Accuracy（精度）| 24Hours 误差不超过1s  
+Start-up | 从0 开始累计  
 
 可以通过CNTFRQ 设置/读取 frenquency. 
 
@@ -84,19 +85,21 @@ Each timer is implemented as three registers:
 ![timer registers summary](https://raw.githubusercontent.com/JShell07/jshell07.github.io/master/images/arm-generic-timer/timer_registers_summary.png)
 
 Accessing timer registers
-timer | remarks
-:-: | :-
-PL1 physical timer | - secure mode<br>- Non-secure Hyp mode<br>- CNTHCTL.PL1PCEN=1, Non-secure PL1 mode<br> - CNTKCTL.PL0PTEN=1, PL0 mode
-virtual timer | secure, Non-secure PL1 mode, Hyp mode
-PL2 pyhsical timer | Non-secure Hyp mode, 或SCR.NS=1时 Secure Monitor
+
+timer | remarks  
+:-: | :-  
+PL1 physical timer | - secure mode<br>- Non-secure Hyp mode<br>- CNTHCTL.PL1PCEN=1, Non-secure PL1 mode<br> - CNTKCTL.PL0PTEN=1, PL0 mode  
+virtual timer | secure, Non-secure PL1 mode, Hyp mode  
+PL2 pyhsical timer | Non-secure Hyp mode, 或SCR.NS=1时 Secure Monitor  
 
 在中断号上分配如下：
-IRQ NUM | Remarks
-:-: | :-
-29 | physical timer in secure PL1 mode
-30 | physical timer in Non-secure PL1 mode
-27 | virtual timer in Non-secure PL1 mode
-26 | physical timer in hyp mode
+
+IRQ NUM | Remarks  
+:-: | :-  
+29 | physical timer in secure PL1 mode  
+30 | physical timer in Non-secure PL1 mode  
+27 | virtual timer in Non-secure PL1 mode  
+26 | physical timer in hyp mode  
 
 ### 6.1. CompareValue
 CompareValue 的操作可以看作是unsigned 64-bit upcounter.
