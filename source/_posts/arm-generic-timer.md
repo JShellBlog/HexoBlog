@@ -26,15 +26,15 @@ The Generic Timer 提供如下几种counter与Timer：
 ## 2. system counter
 system counter规格如下
 
-子项 | 需求  
-:-: | :-  
-Width | 至少56bits 宽度，返回64-bit 是以0 进行扩展得到  
-Frequency | 典型范围 1-50MHz. 在power-saving 时可以更低，例如500-20KHz  
-Roll-over | 不少于40年  
-Accuracy（精度）| 24Hours 误差不超过1s  
-Start-up | 从0 开始累计  
+|       子项       | 需求                                                       |
+| :--------------: | :--------------------------------------------------------- |
+|      Width       | 至少56bits 宽度，返回64-bit 是以0 进行扩展得到             |
+|    Frequency     | 典型范围 1-50MHz. 在power-saving 时可以更低，例如500-20KHz |
+|    Roll-over     | 不少于40年                                                 |
+| Accuracy（精度） | 24Hours 误差不超过1s                                       |
+|     Start-up     | 从0 开始累计                                               |
 
-可以通过CNTFRQ 设置/读取 frenquency. 
+可以通过CNTFRQ 设置/读取 frequency. 
 
 ## 3. physical counter
 CNTPCT（64-bit） 寄存器存储了physical counter
@@ -46,7 +46,7 @@ CNTPCT（64-bit） 寄存器存储了physical counter
 ## 4. virtual counter
 在分两种情况：
 - 没有virtualization Extension时，virtual time 与physical time相同
-- 具备virtualization Extension，virtual counter里面的值等于physical counter减去 64-bit virtual offset.(<font color=green>virutal_counter = physical_counter - virtual_offset</font>)
+- 具备virtualization Extension，virtual counter里面的值等于physical counter减去 64-bit virtual offset.(<font color=green>virtual_counter = physical_counter - virtual_offset</font>)
 
 CNTVCT 寄存器包含了virtual counter。 在Secure PL1 mode, Non-secure PL1, PL2 mode 下能访问。
 
@@ -79,41 +79,41 @@ __Virtualization Extensions implemented__
 
 Each timer is implemented as three registers:
 - A 64-bit __CompareValue register__, that provides a 64-bit unsigned upcounter.  
-- A 32-bit __TimerValue register__, that provides a 32-bit signed downcounter.  
+- A 32-bit __TimerValue register__, that provides a 32-bit signed down counter.  
 - A 32-bit __Control register__.
 
 ![timer registers summary](https://raw.githubusercontent.com/JShell07/jshell07.github.io/master/images/arm-generic-timer/timer_registers_summary.png)
 
 Accessing timer registers
 
-timer | remarks  
-:-: | :-  
-PL1 physical timer | - secure mode<br>- Non-secure Hyp mode<br>- CNTHCTL.PL1PCEN=1, Non-secure PL1 mode<br> - CNTKCTL.PL0PTEN=1, PL0 mode  
-virtual timer | secure, Non-secure PL1 mode, Hyp mode  
-PL2 pyhsical timer | Non-secure Hyp mode, 或SCR.NS=1时 Secure Monitor  
+|       timer        | remarks                                                                                                              |
+| :----------------: | :------------------------------------------------------------------------------------------------------------------- |
+| PL1 physical timer | - secure mode<br>- Non-secure Hyp mode<br>- CNTHCTL.PL1PCEN=1, Non-secure PL1 mode<br> - CNTKCTL.PL0PTEN=1, PL0 mode |
+|   virtual timer    | secure, Non-secure PL1 mode, Hyp mode                                                                                |
+| PL2 physical timer | Non-secure Hyp mode, 或SCR.NS=1时 Secure Monitor                                                                     |
 
 在中断号上分配如下：
 
-IRQ NUM | Remarks  
-:-: | :-  
-29 | physical timer in secure PL1 mode  
-30 | physical timer in Non-secure PL1 mode  
-27 | virtual timer in Non-secure PL1 mode  
-26 | physical timer in hyp mode  
+| IRQ NUM | Remarks                               |
+| :-----: | :------------------------------------ |
+|   29    | physical timer in secure PL1 mode     |
+|   30    | physical timer in Non-secure PL1 mode |
+|   27    | virtual timer in Non-secure PL1 mode  |
+|   26    | physical timer in hyp mode            |
 
 ### 6.1. CompareValue
-CompareValue 的操作可以看作是unsigned 64-bit upcounter.
+CompareValue 的操作可以看作是unsigned 64-bit up counter.
 
 <font color=red>Eventtriggered = (Counter[63:0] - Offset[63:0]) - CompareValue[63:0] >= 0 </font>
 
-术语 | 说明
-:-: | :-
-Counter | physical counter, 读取CNTPCT，CNTVCT 寄存器  
-Offset | 如果没有Virtualization Extension, offset=0, 反之，offset = <CNTVOFF>
-CompareValue | 比较值寄存器，CNTP_CVAL, CNTHP_CVAL, or CNTV_CVAL.
+|     术语     | 说明                                                                 |
+| :----------: | :------------------------------------------------------------------- |
+|   Counter    | physical counter, 读取CNTPCT，CNTVCT 寄存器                          |
+|    Offset    | 如果没有Virtualization Extension, offset=0, 反之，offset = <CNTVOFF> |
+| CompareValue | 比较值寄存器，CNTP_CVAL, CNTHP_CVAL, or CNTV_CVAL.                   |
 
 ### 6.2. TimerValue
-TimerValue 的操作可以看作是signed 32-bit downcounter.
+TimerValue 的操作可以看作是signed 32-bit down counter.
 
 <font color=red>Eventtriggered = (TimerValue <= 0) </font>
 
@@ -126,3 +126,5 @@ TimerValue 值来源于CNTP_TVAL, CNTHP_TVAL, or CNTV_TVAL.
 ## Reference
 cortex_a7_mpcore_r0p5_trm(arm_trm).pdf
 arm_architecture_reference_manual(arm_arm).pdf
+
+[Linux时间子系统之（十七）：ARM generic timer 驱动分析](http://www.wowotech.net/timer_subsystem/armgeneraltimer.html)
