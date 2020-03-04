@@ -1,0 +1,52 @@
+
+# Base
+[ARM64架构下地址翻译相关的宏定义](http://www.wowotech.net/memory_management/arm64-memory-addressing.html)
+
+[Linux内存模型](http://www.wowotech.net/memory_management/memory_model.html)
+
+[Linux kernel内存管理的基本概念](http://www.wowotech.net/memory_management/concept.html)
+
+# Cache
+[浅谈Cache Memory](http://www.wowotech.net/memory_management/458.html)
+
+
+# TLB
+[TLB flush操作](http://www.wowotech.net/memory_management/tlb-flush.html)
+
+# MM 初始化
+[内存初始化（上）](http://www.wowotech.net/memory_management/mm-init-1.html)
+
+[内存初始化代码分析（一）：identity mapping和kernel image mapping](http://www.wowotech.net/memory_management/__create_page_tables_code_analysis.html)
+
+[内存初始化代码分析（二）：内存布局](http://www.wowotech.net/memory_management/memory-layout.html)
+
+[内存初始化代码分析（三）：创建系统内存地址映射](http://www.wowotech.net/memory_management/mem_init_3.html)
+
+# MM分配
+[图解slub](http://www.wowotech.net/memory_management/426.html)
+
+[slub分配器](http://www.wowotech.net/memory_management/247.html)
+
+[SLUB DEBUG原理](http://www.wowotech.net/memory_management/427.html)
+
+[KASAN实现原理](http://www.wowotech.net/memory_management/424.html)
+
+# MM 回收
+[linux kernel内存回收机制](http://www.wowotech.net/memory_management/233.html)
+
+[linux kernel内存碎片防治技术](http://www.wowotech.net/memory_management/memory-fragment.html)
+
+[页面回收的基本概念](http://www.wowotech.net/memory_management/page_reclaim_basic.html)
+
+# DMA
+[Dynamic DMA mapping Guide](http://www.wowotech.net/memory_management/DMA-Mapping-api.html)
+
+# CMA
+[CMA模块学习笔记](http://www.wowotech.net/memory_management/cma.html)
+
+# Other
+[ARM64 Kernel Image Mapping的变化](http://www.wowotech.net/memory_management/436.html)
+
+[copy_{to,from}_user()的思考](http://www.wowotech.net/memory_management/454.html)
+
+[文件缓存回写简述](http://www.wowotech.net/memory_management/327.html)
