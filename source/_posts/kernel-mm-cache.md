@@ -45,10 +45,11 @@ tag: 这个位宽除index, offset bits剩余部分
 ### 2.2. 多路组相连缓存（multiple ways set associative cache） 
 平均将cache 分成多份，每一份就是一路(way)。在每一路中index 相同的cache lines称为组(set)。直接映射也可以称之为单路组相连。
 
-多路组相连与直接映射对比：
-优势 | 劣势
-:- | :-
-在相同的index 情况下， 如果一路(way) 中miss, 可以继续在另一路中寻找相同index 的cache line | 硬件成本更高，每次比较tag 需要比较多个cache line
+多路组相连与直接映射对比：  
+
+| 优势                                                                                      | 劣势                                             |
+| :---------------------------------------------------------------------------------------- | :----------------------------------------------- |
+| 在相同的index 情况下， 如果一路(way) 中miss, 可以继续在另一路中寻找相同index 的cache line | 硬件成本更高，每次比较tag 需要比较多个cache line |
 
 ![2-way set associative cache](https://raw.githubusercontent.com/JShell07/jshell07.github.io/master/images/kernel_mm/cache/2_way_set_associative_cache.png)
 
@@ -84,21 +85,22 @@ cache 的引入，Multiple Core, DMA 外设等因素，CPU Core访问的数据�
 ### 4.1. memory attribute
 比较直接的方式就是限制memory 的type 与attribute。例如设定成device type or strongly-ordered.
 
-type | shareablility | cacheability
-:-: | :- | :-
-strongly-ordered | outer shareable | Non-cacheable
-device | outer shareable | Non-cacheable
-normal | one of:<br>- Non-shareable <br>- inner shareable <br>- outer shareable | one of:<br>- Non-cacheable <br>- inner cacheable <br>- outer cacheable
+|       type       | shareablility                                                          | cacheability                                                           |
+| :--------------: | :--------------------------------------------------------------------- | :--------------------------------------------------------------------- |
+| strongly-ordered | outer shareable                                                        | Non-cacheable                                                          |
+|      device      | outer shareable                                                        | Non-cacheable                                                          |
+|      normal      | one of:<br>- Non-shareable <br>- inner shareable <br>- outer shareable | one of:<br>- Non-cacheable <br>- inner cacheable <br>- outer cacheable |
 
 ### 4.2. cache 一致性协议
 在cache line 增加状态位，表明当前cache line 的状态
 #### MESI
-Status | Remarks
-:- | :-
-<font color=red>M</font> 修改(modified) | cache line有效，数据被修改，与main memory 中不一致
-<font color=red>E</font> 独享(Exclusive) | cache line 有效，数据与主存一致，并数据只存在于该cache line
-<font color=red>S</font> 共享(shared) | cache line 有效，数据与主存一致，数据存在于多个cache line
-<font color=red>I</font> 无效(invalide) | cache line 无效
+
+| Status                                   | Remarks                                                     |
+| :--------------------------------------- | :---------------------------------------------------------- |
+| <font color=red>M</font> 修改(modified)  | cache line有效，数据被修改，与main memory 中不一致          |
+| <font color=red>E</font> 独享(Exclusive) | cache line 有效，数据与主存一致，并数据只存在于该cache line |
+| <font color=red>S</font> 共享(shared)    | cache line 有效，数据与主存一致，数据存在于多个cache line   |
+| <font color=red>I</font> 无效(invalide)  | cache line 无效                                             |
 
 状态图转换如下:
 Fixme
@@ -107,13 +109,13 @@ Fixme
 #### MOESI
 相较于MESI，增加O(Owned), S也与MESI 定义不同，cache line 不一定与主存一致。M，E，I定义相同。
 
-Status | Remarks
-:- | :-
-<font color=red>M</font> 修改(modified) | cache line有效，数据被修改，与main memory 中不一致
-<font color=red>O</font> 拥有(Owned) | O为1， 当前cache line是当前cpu 最新数据拷贝，且其他core 一定具有该cache line 的副本状态位S
-<font color=red>E</font> 独享(Exclusive) | cache line 有效，数据与主存一致，并数据只存在于该cache line
-<font color=red>S</font> 共享(shared) | cache line 有效，数据与主存**不一定**一致，数据存在于多个cache line
-<font color=red>I</font> 无效(invalide) | cache line 无效
+| Status                                   | Remarks                                                                                    |
+| :--------------------------------------- | :----------------------------------------------------------------------------------------- |
+| <font color=red>M</font> 修改(modified)  | cache line有效，数据被修改，与main memory 中不一致                                         |
+| <font color=red>O</font> 拥有(Owned)     | O为1， 当前cache line是当前cpu 最新数据拷贝，且其他core 一定具有该cache line 的副本状态位S |
+| <font color=red>E</font> 独享(Exclusive) | cache line 有效，数据与主存一致，并数据只存在于该cache line                                |
+| <font color=red>S</font> 共享(shared)    | cache line 有效，数据与主存**不一定**一致，数据存在于多个cache line                        |
+| <font color=red>I</font> 无效(invalide)  | cache line 无效                                                                            |
 
 Fixme
 ![MOESI](https://raw.githubusercontent.com/JShell07/jshell07.github.io/master/images/kernel_mm/cache/MOESI.png)
@@ -122,11 +124,12 @@ Fixme
 ARM 提供了原子操作的指令,ldrex, strex, clrex系列指令。这能保证在多核之间对数据进行唯一性的访问。
 
 配对使用的指令：
-load instruction | store instruction | remarks
-:- | :- | :-
-ldrexb | strexb | byte access
-ldrexh | strexh | half world access
-ldrexd | strexd | double world access
+
+| load instruction | store instruction | remarks             |
+| :--------------- | :---------------- | :------------------ |
+| ldrexb           | strexb            | byte access         |
+| ldrexh           | strexh            | half world access   |
+| ldrexd           | strexd            | double world access |
 
 ```c
 # load Ry 地址中的数据到Rx，并标记对该段内存独占访问

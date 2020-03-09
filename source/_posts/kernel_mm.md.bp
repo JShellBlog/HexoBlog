@@ -25,6 +25,8 @@
 # MM分配
 [图解slub](http://www.wowotech.net/memory_management/426.html)
 
+[linux 内核 内存管理 slub算法 （一） 原理](https://blog.csdn.net/lukuen/article/details/6935068)
+
 [slub分配器](http://www.wowotech.net/memory_management/247.html)
 
 [SLUB DEBUG原理](http://www.wowotech.net/memory_management/427.html)
