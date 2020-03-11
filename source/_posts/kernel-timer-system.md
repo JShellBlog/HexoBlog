@@ -4,7 +4,7 @@ date: 2019-11-28 14:54:31
 tags:
     - timer
 categories:
-    - driver
+    - drivers
 ---
 ## 1. Kernel Timer 软件架构
 

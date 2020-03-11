@@ -35,7 +35,7 @@ Nand Flash 常见有：
 - 总线接口Flash    
 - SPI Flash  
 总线flash需要你的MCU上有外部总线接口，SPI flash就是通过SPI口对flash进行读写。
-速度上，总线flash比SPI的快，但是SPI的便宜。
+速度上，总线flash比SPI的快，但是SPI 芯片封装布局具有优势。
 
 如果Nand Flash 使用总线接口，一般pin 如下：
 
