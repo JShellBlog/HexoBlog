@@ -141,9 +141,26 @@ ldrex Rx, [Ry]
 strex Rx, Ry, [Rz]
 ```
 
+## 5. Cache Maintenance Operations
+armv7 下cache 可以依据MVA(modified virtual address)，set/way或全部内容进行维护更新,可参看如下图：
+![cache_maintenance_operations](https://raw.githubusercontent.com/JShell07/jshell07.github.io/master/images/kernel_mm/cache/cache_maintenance_operations.png)
+
+POU - to point of unification
+POC - to point of coherence
+
+POU 主要指Instruction, data, TLB 看到的为同一份mem
+POC 主要指各个Core 之间看到的为同一份mem。
+
+![POU](https://raw.githubusercontent.com/JShell07/jshell07.github.io/master/images/kernel_mm/cache/POU.png)
+
+![POC](https://raw.githubusercontent.com/JShell07/jshell07.github.io/master/images/kernel_mm/cache/POC.png)
+
+![POU&POC](https://raw.githubusercontent.com/JShell07/jshell07.github.io/master/images/kernel_mm/cache/POU%26POC.png)
+
 ## Reference
 [浅谈Cache Memory](http://www.wowotech.net/memory_management/458.html)  
 [缓存一致性协议MESI和MOESI](https://blog.csdn.net/loongshawn/article/details/83083346)  
 [MESI & MOESI 协议](http://www.360doc.com/content/19/0410/14/496343_827699509.shtml)  
 [arm64 memory 属性 Device-nGnRnE](https://blog.csdn.net/shenhuxi_yu/article/details/90617675)  
 [ARM平台下独占访问指令LDREX和STREX的原理与使用详解](https://blog.csdn.net/roland_sun/article/details/47670099)  
+[什么是PoU和PoC？](https://community.arm.com/cn/f/discussions/3437/pou-poc/9674)
