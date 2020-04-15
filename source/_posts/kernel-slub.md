@@ -5,7 +5,7 @@ tags: slub
 categories: memory
 ---
 
-![slab allocator](https://bkimg.cdn.bcebos.com/pic/00e93901213fb80e19be59c239d12f2eb93894b3?x-bce-process=image/watermark,g_7,image_d2F0ZXIvYmFpa2U5Mg==,xp_5,yp_5)
+![slab allocator](https://raw.githubusercontent.com/JShell07/jshell07.github.io/master/images/kernel_mm/slab/slab.jpg)
 
 <!--more-->
 ## 1. 前言
