@@ -1,0 +1,55 @@
+
+
+ARM® Cortex®-M microcontrollers
+
+keil MDK 整体架构如下：
+
+FixMe
+![keil MDK structure]()
+
+## CMSIS(Cortex Microcontroller Software Interface Standard)
+
+
+是专为Cortex-M 微控制器上运行嵌入式应用的软件框架。他提供：
+- software interface
+- hardware abstraction layers.
+
+>CMSIS provides a ground-up software framework for embedded applications that run on Cortex-M based microcontrollers. 
+
+CMSIS 开源项目代码位于：
+https://github.com/ARM-software/CMSIS_5
+
+CMSIS 提供的主件有：
+- CMSIS-CORE
+- CMSIS-RTOS2
+- CMSIS-DSP
+- CMSIS-Driver
+
+### CMSIS-CORE
+提供：
+- processor cores and peripherals API
+- system startup code
+
+在keil 中创建project 时，选定处理器后，我们就可以选择软件组件。
+
+FixMe
+![select software componet]()
+
+总体来说，选择的主要为下图所示：
+FixMe
+![CMSIS Core]()
+
+### CMSIS-RTOS2
+提供标准RTOS API，以此来跨平台支持middleware, libraries 等。
+
+### CMSIS-DSP
+DSP(digital signal processing) lib.
+
+### CMSIS-Driver
+支援跨平台外围设备驱动interface。
+
+
+  
+
+
+
